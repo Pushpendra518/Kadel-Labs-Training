@@ -1,0 +1,121 @@
+🔹 CORE SPARK CONCEPTS
+
+1) What is Apache Spark?
+
+Apache Spark is an open-source distributed data processing framework.
+It is used to process large amounts of data very fast.
+Spark can handle batch processing, streaming data, machine learning, and big data analytics.
+It works in memory, which makes it faster than traditional systems.
+
+2) Why Spark is used in Data Engineering
+
+Spark is used in Data Engineering because:
+- It processes big data quickly.
+- It supports multiple file formats (CSV, JSON, Parquet, etc.).
+- It works well with cloud platforms.
+- It can handle ETL (Extract, Transform, Load) tasks efficiently.
+- It supports distributed computing.
+
+3) Spark Architecture
+
+Spark works in a master-slave architecture.
+
+Driver:
+The Driver is the main program.
+It controls the Spark application.
+It creates SparkSession and sends tasks to executors.
+
+Executors:
+Executors are worker nodes.
+They run the tasks assigned by the driver.
+They store data and perform computations.
+
+Cluster Manager:
+The Cluster Manager manages resources.
+It allocates CPU and memory to Spark applications.
+Examples: YARN, Kubernetes, Standalone cluster.
+
+4) What is SparkSession?
+
+SparkSession is the entry point to work with Spark.
+It is used to create DataFrames, read files, and run SQL queries.
+Without SparkSession, we cannot start working in Spark.
+
+5) DataFrame vs RDD
+
+RDD (Resilient Distributed Dataset):
+- Low-level data structure.
+- Works with unstructured data.
+- More control but more complex.
+
+DataFrame:
+- High-level abstraction.
+- Works like a table with rows and columns.
+- Optimized and easier to use than RDD.
+
+6) Transformations vs Actions
+
+Transformations:
+Transformations create a new DataFrame from an existing one.
+They do not execute immediately.
+Examples: select(), filter(), groupBy()
+
+Actions:
+Actions trigger execution.
+They return results.
+Examples: show(), collect(), count()
+
+7) Lazy Evaluation (Basic Idea)
+
+Spark does not run transformations immediately.
+It waits until an action is called.
+This is called Lazy Evaluation.
+It helps Spark optimize the execution plan and improve performance.
+
+
+🔹 DATA HANDLING CONCEPTS
+
+1) Reading CSV files in Spark
+
+We can read CSV files using spark.read.csv().
+
+Example:
+df = spark.read.csv("file_path", header=True, inferSchema=True)
+
+2) Schema Inference
+
+Schema inference means Spark automatically detects column data types.
+When we use inferSchema=True, Spark decides the data types.
+
+3) Manually Defining Schema
+
+We can define schema manually using StructType and StructField.
+This gives better performance and control.
+
+Example:
+from pyspark.sql.types import StructType, StructField, StringType, IntegerType
+
+schema = StructType([
+    StructField("name", StringType(), True),
+    StructField("age", IntegerType(), True)
+])
+
+4) Data Types in Spark
+
+Common Spark data types:
+
+StringType – for text values  
+IntegerType – for whole numbers  
+DoubleType – for decimal numbers  
+DateType – for date values  
+
+5) Column Operations
+
+We can perform operations on columns such as:
+
+- Selecting columns: df.select("name")
+- Filtering rows: df.filter(df.age > 18)
+- Creating new column: df.withColumn("new_col", df.age + 5)
+- Renaming column: df.withColumnRenamed("old", "new")
+
+These operations help in transforming and cleaning the data.
