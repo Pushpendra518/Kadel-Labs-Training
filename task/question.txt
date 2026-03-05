@@ -66,6 +66,8 @@ Actions trigger execution.
 They return results.
 Examples: show(), collect(), count()
 
+
+
 7) Lazy Evaluation (Basic Idea)
 
 Spark does not run transformations immediately.
