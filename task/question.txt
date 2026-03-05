@@ -1,5 +1,6 @@
 🔹 CORE SPARK CONCEPTS
 
+
 1) What is Apache Spark?
 
 Apache Spark is an open-source distributed data processing framework.
