@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlowStack — SaaS Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="logo">FlowStack</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav" id="nav">
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#calculator">Calculator</a>
+      <a href="#" class="btn btn-primary">Get Started</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Ship faster with <span class="highlight">FlowStack</span></h1>
+        <p class="hero-subtitle">The all-in-one platform that scales with your team. Manage projects, automate workflows, and grow without the complexity.</p>
+        <div class="hero-cta">
+          <a href="#calculator" class="btn btn-primary btn-lg">See your price</a>
+          <a href="#features" class="btn btn-outline btn-lg">Learn more</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="FlowStack dashboard and analytics" class="hero-image">
+        <div class="hero-card hero-card-1"></div>
+        <div class="hero-card hero-card-2"></div>
+        <div class="hero-card hero-card-3"></div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <h2>Everything you need to scale</h2>
+      <p class="section-subtitle">Built for teams that move fast and ship often.</p>
+      <div class="features-grid">
+        <article class="feature-card">
+          <div class="feature-icon">◆</div>
+          <h3>Unified workspace</h3>
+          <p>Tasks, docs, and conversations in one place. No more context switching.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">◇</div>
+          <h3>Smart automation</h3>
+          <p>Rules and workflows that run in the background. Set once, forget never.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">○</div>
+          <h3>Real-time analytics</h3>
+          <p>Dashboards that update live. Know exactly where your time goes.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="pricing-calculator" id="calculator">
+      <h2>Pricing calculator</h2>
+      <p class="section-subtitle">Adjust sliders to see your estimated monthly cost.</p>
+      <div class="calculator-card">
+        <div class="calculator-controls">
+          <div class="control-group">
+            <label for="users">
+              <span>Team members</span>
+              <strong id="users-value">10</strong>
+            </label>
+            <input type="range" id="users" min="1" max="100" value="10">
+          </div>
+          <div class="control-group">
+            <label for="storage">
+              <span>Storage (GB)</span>
+              <strong id="storage-value">50</strong>
+            </label>
+            <input type="range" id="storage" min="10" max="500" value="50" step="10">
+          </div>
+          <div class="control-group">
+            <label for="api">
+              <span>API calls / month (K)</span>
+              <strong id="api-value">100</strong>
+            </label>
+            <input type="range" id="api" min="10" max="1000" value="100" step="10">
+          </div>
+        </div>
+        <div class="calculator-result">
+          <span class="result-label">Estimated monthly cost</span>
+          <p class="result-price"><span id="total-price">49</span> <span class="currency">USD</span>/mo</p>
+          <div class="result-annual">
+            <span class="result-label-small">Monthly if paid annually <em>(2 months free)</em></span>
+            <p class="result-price result-price-annual"><span id="annual-price">41</span> <span class="currency">USD</span>/mo</p>
+          </div>
+          <a href="#" class="btn btn-primary">Start free trial</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+      <h2>Simple pricing</h2>
+      <p class="section-subtitle">Pick the plan that fits. Upgrade or downgrade anytime.</p>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Starter</h3>
+          <p class="price"><span class="amount">29</span>/mo</p>
+          <ul>
+            <li>Up to 5 members</li>
+            <li>20 GB storage</li>
+            <li>50K API calls</li>
+          </ul>
+          <a href="#" class="btn btn-outline">Get started</a>
+        </div>
+        <div class="pricing-card featured">
+          <span class="badge">Popular</span>
+          <h3>Pro</h3>
+          <p class="price"><span class="amount">79</span>/mo</p>
+          <ul>
+            <li>Up to 25 members</li>
+            <li>100 GB storage</li>
+            <li>250K API calls</li>
+          </ul>
+          <a href="#" class="btn btn-primary">Get started</a>
+        </div>
+        <div class="pricing-card">
+          <h3>Enterprise</h3>
+          <p class="price"><span class="amount">199</span>/mo</p>
+          <ul>
+            <li>Unlimited members</li>
+            <li>500 GB storage</li>
+            <li>1M API calls</li>
+          </ul>
+          <a href="#" class="btn btn-outline">Contact sales</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+      <h2>Loved by teams everywhere</h2>
+      <p class="section-subtitle">See what our customers have to say.</p>
+      <div class="testimonials-grid">
+        <blockquote class="testimonial-card">
+          <p>"FlowStack cut our onboarding time in half. New hires are productive from day one."</p>
+          <footer>
+            <strong>Sarah Chen</strong>
+            <span>CTO, Nextera</span>
+          </footer>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <p>"The automation features alone paid for the subscription in the first month. No joke."</p>
+          <footer>
+            <strong>Marcus Webb</strong>
+            <span>Head of Ops, Flowbase</span>
+          </footer>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <p>"Finally a tool that scales with us. We went from 5 to 50 people without changing a thing."</p>
+          <footer>
+            <strong>Elena Rodriguez</strong>
+            <span>CEO, ScaleUp</span>
+          </footer>
+        </blockquote>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; FlowStack. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
